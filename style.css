@@ -51,9 +51,9 @@ body {
     margin-bottom: 20px;
 }
 
-.content .Introduction{
-    float: left;
+content div.Introduction{
     width: 50%;
+    float: left;
     min-width: 600px;
 }
 
@@ -74,32 +74,22 @@ body {
 
 
 
-/* On screens that are less than 700px wide, make the sidebar into a topbar */
-@media screen and (max-width: 700px) {
-    .sidebar {
-      width: 150%;
-      height: auto;
-      position: relative;
-    }
-    .sidebar a {float: left;}
-    
-    div.content {margin-left: 0;}
-
-    div.content {
-        margin-left: 10px;
-      }
-    div.production {
-      margin-left: 200px;
-      }
-  
-  }
-
-/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
-@media screen and (max-width: 400px) {
-    .sidebar a {
-      text-align: center;
-      float: none;
-    }
-  }
 
 
+/* Forms selector */
+select {
+    width: 200px;
+    height: 30px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.sidebar p {
+    margin-left: 10px;
+}

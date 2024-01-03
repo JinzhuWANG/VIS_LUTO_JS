@@ -1,6 +1,6 @@
-
 // create chart
  document.addEventListener('DOMContentLoaded', function () {
+
     Highcharts.setOptions({
         colors: [
             '#7cb5ec',
@@ -279,9 +279,6 @@
             }
         },   
     });
-
-
-
 
 });
     

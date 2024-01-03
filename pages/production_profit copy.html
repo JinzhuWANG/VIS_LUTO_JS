@@ -28,7 +28,37 @@
         <a href="./GHG_emmisions.html">Land Use</a>
         <a href="./water_usage.html">GHG Emmisions</a>
         <a href="./spatial_maps.html">Maps</a>
-
+    
+        <hr>
+    
+        <!-- chart_selector -->
+        <p>Select the type of chart:</p>
+    
+        <select id="chart_selector">
+            <option value="Production">Production</option>
+            <option value="Revenue">Revenue</option>
+            <option value="Cost">Cost</option>
+            <option value="Profit">Profit</option>
+        </select>
+    
+    
+        <!-- Production has only one plot, skip making selection -->
+    
+        <!-- Revenue => 5 sub plots -->
+        <div class="plot_selector" id="revenue_sub">
+            <p>Select a sub plot:</p>
+            <select>
+                <option value="By Irrigation">By Irrigation</option>
+                <option value="By Productes">By Productes</option>
+                <option value="By Commodity">By Commodity</option>
+                <option value="By Crop/Livestock - separate">By Crop/Livestock - separate</option>
+                <option value="By Crop/Livestock - total">By Crop/Livestock - total</option>
+            </select>
+        </div>
+    
+    
+    
+    
     </div>
 
     <!-- The main content -->
