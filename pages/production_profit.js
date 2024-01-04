@@ -27,7 +27,11 @@
         title: {
             text: 'Agricultural Production'
         },
-    
+
+        credits: {
+            enabled: false
+        },
+
         data: {
             csvURL: "../data/production_1_quantity_df_wide.csv",
         },
@@ -70,6 +74,10 @@
 
         title: {
             text: 'Revenue divided by irrigation'
+        },
+
+        credits: {
+            enabled: false
         },
     
         data: {
@@ -115,6 +123,10 @@
         title: {
             text: 'Revenue divided by products'
         },
+
+        credits: {
+            enabled: false
+        },
     
         data: {
             csvURL: "../data/production_2_2_revenue_Source_wide.csv",
@@ -158,6 +170,10 @@
 
         title: {
             text: 'Revenue divided by commodity type'
+        },
+
+        credits: {
+            enabled: false
         },
     
         data: {
@@ -203,7 +219,11 @@
         title: {
             text: 'Revenue divided by crop/lvestock type'
         },
-    
+        
+        credits: {
+            enabled: false
+        },
+
         data: {
             csvURL: "../data/production_2_4_revenue_Type_wide.csv",
         },
@@ -252,6 +272,10 @@
             csvURL: "../data/production_2_5_revenue_crop_lvstk_wide.csv",
         },
         
+        credits: {
+            enabled: false
+        },
+
         yAxis: {
             title: {
                 text: 'Revenue divided by crop/lvestock total (billion AU$)'
