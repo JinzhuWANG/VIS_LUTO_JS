@@ -1,0 +1,325 @@
+[
+    {
+        "name": "Agricultural soils: Animal production, dung and urine",
+        "data": [
+            {
+                "name": "Beef",
+                "value": 1.707542549968438
+            },
+            {
+                "name": "Dairy",
+                "value": 0.49948898192359137
+            },
+            {
+                "name": "Sheep",
+                "value": 1.4202136445206115
+            }
+        ]
+    },
+    {
+        "name": "Agricultural soils: Direct Soil Emissions (biogenic)",
+        "data": [
+            {
+                "name": "Beef",
+                "value": 0.3679859716954007
+            },
+            {
+                "name": "Cotton",
+                "value": 0.06938295775222778
+            },
+            {
+                "name": "Dairy",
+                "value": 0.2936686256827286
+            },
+            {
+                "name": "Grapes",
+                "value": 0.07406101657282708
+            },
+            {
+                "name": "Plantation fruit",
+                "value": 0.06163972153275518
+            },
+            {
+                "name": "Sugar",
+                "value": 0.5444906970214843
+            },
+            {
+                "name": "Vegetables",
+                "value": 0.11772676724406075
+            },
+            {
+                "name": "Winter cereals",
+                "value": 0.949471474862654
+            }
+        ]
+    },
+    {
+        "name": "Agricultural soils: Indirect leaching and runoff",
+        "data": [
+            {
+                "name": "Beef",
+                "value": 1.0772440635613796
+            },
+            {
+                "name": "Dairy",
+                "value": 0.6445266497138286
+            },
+            {
+                "name": "Sheep",
+                "value": 0.6939928458451057
+            }
+        ]
+    },
+    {
+        "name": "Chemical Application",
+        "data": [
+            {
+                "name": "Winter cereals",
+                "value": 1.0382219956358023
+            },
+            {
+                "name": "Winter legumes",
+                "value": 0.10308282799786492
+            },
+            {
+                "name": "Winter oilseeds",
+                "value": 0.07129242862701415
+            }
+        ]
+    },
+    {
+        "name": "Crop Management",
+        "data": []
+    },
+    {
+        "name": "Cultivation",
+        "data": [
+            {
+                "name": "Beef",
+                "value": 0.06915765644288427
+            },
+            {
+                "name": "Hay",
+                "value": 0.08364465124511719
+            },
+            {
+                "name": "Sugar",
+                "value": 0.08616117254638671
+            },
+            {
+                "name": "Winter cereals",
+                "value": 0.26553126408848254
+            },
+            {
+                "name": "Winter oilseeds",
+                "value": 0.07232896634292602
+            }
+        ]
+    },
+    {
+        "name": "Electricity Use livestock",
+        "data": [
+            {
+                "name": "Dairy",
+                "value": 0.4767535278276849
+            }
+        ]
+    },
+    {
+        "name": "Fertiliser production",
+        "data": [
+            {
+                "name": "Beef",
+                "value": 0.1852718612253374
+            },
+            {
+                "name": "Cotton",
+                "value": 0.05619455552673341
+            },
+            {
+                "name": "Dairy",
+                "value": 0.14028209138443798
+            },
+            {
+                "name": "Grapes",
+                "value": 0.05377110977644542
+            },
+            {
+                "name": "Hay",
+                "value": 0.17834253405761719
+            },
+            {
+                "name": "Plantation fruit",
+                "value": 0.0984076604048349
+            },
+            {
+                "name": "Sugar",
+                "value": 0.17626711120605468
+            },
+            {
+                "name": "Summer cereals",
+                "value": 0.06051752456665039
+            },
+            {
+                "name": "Vegetables",
+                "value": 0.15784422726056743
+            },
+            {
+                "name": "Winter cereals",
+                "value": 2.647542072065602
+            },
+            {
+                "name": "Winter legumes",
+                "value": 0.14031857726488822
+            },
+            {
+                "name": "Winter oilseeds",
+                "value": 0.4551447406311035
+            }
+        ]
+    },
+    {
+        "name": "Fodder production",
+        "data": [
+            {
+                "name": "Beef",
+                "value": 0.35921741223726217
+            },
+            {
+                "name": "Dairy",
+                "value": 0.6323371031263028
+            },
+            {
+                "name": "Sheep",
+                "value": 0.2555637435491566
+            }
+        ]
+    },
+    {
+        "name": "Fuel Use livestock",
+        "data": [
+            {
+                "name": "Beef",
+                "value": 1.7787669905566923
+            },
+            {
+                "name": "Dairy",
+                "value": 0.4181706630519382
+            },
+            {
+                "name": "Sheep",
+                "value": 3.4818435018684912
+            }
+        ]
+    },
+    {
+        "name": "Harvesting",
+        "data": [
+            {
+                "name": "Cotton",
+                "value": 0.06347309035491944
+            },
+            {
+                "name": "Winter cereals",
+                "value": 0.2461918682827388
+            }
+        ]
+    },
+    {
+        "name": "Irrigation",
+        "data": []
+    },
+    {
+        "name": "Livestock Enteric Fermentation (biogenic)",
+        "data": [
+            {
+                "name": "Beef",
+                "value": 25.782104506602835
+            },
+            {
+                "name": "Dairy",
+                "value": 4.616338607099731
+            },
+            {
+                "name": "Sheep",
+                "value": 14.822576943340644
+            }
+        ]
+    },
+    {
+        "name": "Livestock Manure Management (biogenic)",
+        "data": [
+            {
+                "name": "Dairy",
+                "value": 0.29815246168759646
+            }
+        ]
+    },
+    {
+        "name": "Pasture Seed production",
+        "data": [
+            {
+                "name": "Beef",
+                "value": 3.147279758595426
+            },
+            {
+                "name": "Dairy",
+                "value": 0.22316823169498615
+            },
+            {
+                "name": "Sheep",
+                "value": 0.7645132411573228
+            }
+        ]
+    },
+    {
+        "name": "Pesticide production",
+        "data": [
+            {
+                "name": "Beef",
+                "value": 0.05120950322348525
+            },
+            {
+                "name": "Cotton",
+                "value": 0.0807350082397461
+            },
+            {
+                "name": "Hay",
+                "value": 0.06247858776855469
+            },
+            {
+                "name": "Sugar",
+                "value": 0.11243170306396486
+            },
+            {
+                "name": "Summer cereals",
+                "value": 0.08783954888916015
+            },
+            {
+                "name": "Winter cereals",
+                "value": 1.5349578715503598
+            },
+            {
+                "name": "Winter legumes",
+                "value": 0.13959631761689822
+            },
+            {
+                "name": "Winter oilseeds",
+                "value": 0.11414503616333008
+            }
+        ]
+    },
+    {
+        "name": "Sowing",
+        "data": [
+            {
+                "name": "Winter cereals",
+                "value": 0.5965091031743952
+            },
+            {
+                "name": "Winter legumes",
+                "value": 0.05487080301994924
+            }
+        ]
+    }
+]

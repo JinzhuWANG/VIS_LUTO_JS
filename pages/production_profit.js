@@ -61,7 +61,12 @@
             column: {
                 stacking: 'normal',
             }
-        },   
+        },
+        
+        exporting: {
+            sourceWidth: 1200,
+            sourceHeight: 600,
+        }
     });
 
     // Chart:production_2_1_revenue_Irrigation_wide
@@ -109,7 +114,12 @@
             column: {
                 stacking: 'normal',
             }
-        },   
+        }, 
+        
+        exporting: {
+            sourceWidth: 1200,
+            sourceHeight: 600,
+        }
     });
 
     // Chart:production_2_2_revenue_Source_wide
@@ -157,7 +167,13 @@
             column: {
                 stacking: 'normal',
             }
-        },   
+        }, 
+        
+        exporting: {
+            sourceWidth: 1200,
+            sourceHeight: 600,
+        }
+
     });
 
     // Chart:production_2_3_revenue_Source_type_wide
@@ -205,7 +221,12 @@
             column: {
                 stacking: 'normal',
             }
-        },   
+        }, 
+        
+        exporting: {
+            sourceWidth: 1200,
+            sourceHeight: 600,
+        }
     });
 
      // Chart:production_2_4_revenue_Type_wide
@@ -217,7 +238,7 @@
         },
 
         title: {
-            text: 'Revenue divided by crop/lvestock type'
+            text: 'Revenue divided by crop/livestock type'
         },
         
         credits: {
@@ -230,7 +251,7 @@
         
         yAxis: {
             title: {
-                text: 'Revenue divided by crop/lvestock type (billion AU$)'
+                text: 'Revenue divided by crop/livestock type (billion AU$)'
             },
         },
 
@@ -253,7 +274,13 @@
             column: {
                 stacking: 'normal',
             }
-        },   
+        }, 
+        
+        exporting: {
+            sourceWidth: 1200,
+            sourceHeight: 600,
+        }
+
     });
 
      // Chart:production_2_5_revenue_crop_lvstk_wide
@@ -265,7 +292,7 @@
         },
 
         title: {
-            text: 'Revenue divided by crop/lvestock total'
+            text: 'Revenue divided by crop/livestock total'
         },
     
         data: {
@@ -278,7 +305,7 @@
 
         yAxis: {
             title: {
-                text: 'Revenue divided by crop/lvestock total (billion AU$)'
+                text: 'Revenue divided by crop/livestock total (billion AU$)'
             },
         },
 
@@ -301,7 +328,12 @@
             column: {
                 stacking: 'normal',
             }
-        },   
+        },
+        
+        exporting: {
+            sourceWidth: 1200,
+            sourceHeight: 600,
+        }
     });
 
 });

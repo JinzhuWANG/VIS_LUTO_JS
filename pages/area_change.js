@@ -71,7 +71,12 @@ document.addEventListener('DOMContentLoaded', function() {
                   }
                 }
               }
-        },   
+        },
+        
+        exporting: {
+            sourceWidth: 1200,
+            sourceHeight: 600,
+        }
     });
 
     // Chart:area_2_irrigation_area_wide
@@ -114,7 +119,12 @@ document.addEventListener('DOMContentLoaded', function() {
             column: {
                 stacking: 'normal',
             }
-        },   
+        }, 
+        
+        exporting: {
+            sourceWidth: 1200,
+            sourceHeight: 600,
+        }
     });
 
     // area_3_am_total_area_wide
@@ -157,7 +167,12 @@ document.addEventListener('DOMContentLoaded', function() {
             column: {
                 stacking: 'normal',
             }
-        },   
+        },  
+        
+        exporting: {
+            sourceWidth: 1200,
+            sourceHeight: 600,
+        }
     });
 
     // area_4_am_lu_area_wide
@@ -217,7 +232,12 @@ document.addEventListener('DOMContentLoaded', function() {
                   }
                 }
               }
-        }, 
+        },
+        
+        exporting: {
+            sourceWidth: 1200,
+            sourceHeight: 600,
+        }
         
         
     }); 
