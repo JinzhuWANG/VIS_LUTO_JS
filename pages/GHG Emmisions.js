@@ -527,11 +527,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                     operator: '>',
                                     value: 1
                                 },
-                                style: {
-                                    color: 'black',
-                                    textOutline: 'none',
-                                    fontWeight: 'normal'
-                                }
+                                
                             }
                         }
                     },
