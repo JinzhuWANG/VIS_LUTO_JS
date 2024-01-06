@@ -33,7 +33,7 @@
         },
 
         data: {
-            csvURL: "../data/production_1_quantity_df_wide.csv",
+            csv: document.getElementById('production_1_quantity_df_wide_csv').innerHTML,
         },
         
         yAxis: {
@@ -86,7 +86,7 @@
         },
     
         data: {
-            csvURL: "../data/production_2_revenue_1_Irrigation_wide.csv",
+            csv: document.getElementById('production_2_revenue_1_Irrigation_wide_csv').innerHTML,
         },
         
         yAxis: {
@@ -139,7 +139,7 @@
         },
     
         data: {
-            csvURL: "../data/production_2_revenue_2_Source_wide.csv",
+            csv: document.getElementById('production_2_revenue_2_Source_wide_csv').innerHTML,
         },
         
         yAxis: {
@@ -193,7 +193,7 @@
         },
     
         data: {
-            csvURL: "../data/production_2_revenue_3_Source_type_wide.csv",
+            csv: document.getElementById('production_2_revenue_3_Source_type_wide_csv').innerHTML,
         },
         
         yAxis: {
@@ -246,7 +246,7 @@
         },
 
         data: {
-            csvURL: "../data/production_2_revenue_4_Type_wide.csv",
+            csv: document.getElementById('production_2_revenue_4_Type_wide_csv').innerHTML,
         },
         
         yAxis: {
@@ -296,7 +296,7 @@
         },
     
         data: {
-            csvURL: "../data/production_2_revenue_5_crop_lvstk_wide.csv",
+            csv: document.getElementById('production_2_revenue_5_crop_lvstk_wide_csv').innerHTML,
         },
         
         credits: {
@@ -353,7 +353,7 @@
         },
     
         data: {
-            csvURL: "../data/production_3_cost_1_Irrigation_wide.csv",
+            csv: document.getElementById('production_3_cost_1_Irrigation_wide_csv').innerHTML,
         },
         
         yAxis: {
@@ -407,7 +407,7 @@
         },
     
         data: {
-            csvURL: "../data/production_3_cost_2_Source_wide.csv",
+            csv: document.getElementById('production_3_cost_2_Source_wide_csv').innerHTML,
         },
         
         yAxis: {
@@ -461,7 +461,7 @@
         },
     
         data: {
-            csvURL: "../data/production_3_cost_3_Source_type_wide.csv",
+            csv: document.getElementById('production_3_cost_3_Source_type_wide_csv').innerHTML,
         },
         
         yAxis: {
@@ -514,7 +514,7 @@
         },
 
         data: {
-            csvURL: "../data/production_3_cost_4_Type_wide.csv",
+            csv: document.getElementById('production_3_cost_4_Type_wide_csv').innerHTML,
         },
         
         yAxis: {
@@ -564,7 +564,7 @@
         },
     
         data: {
-            csvURL: "../data/production_3_cost_5_crop_lvstk_wide.csv",
+            csv: document.getElementById('production_3_cost_5_crop_lvstk_wide_csv').innerHTML,
         },
         
         credits: {
@@ -659,23 +659,25 @@
     }
 
     $(document).ready(function() {
-        $.get('../data/production_4_rev_cost_all.csv', function(data) {
-            var lines = data.split('\n');
+        let data;
+        data = document.getElementById('production_4_rev_cost_all_csv').innerHTML;
+
+        var lines = data.split('\n');
         
-            $.each(lines, function(lineNo, line) {
-                var items = line.split(',');
-        
-                if (lineNo != 0) { // Skip the first line (headers)
-                    production_4_rev_cost_all_option.xAxis.categories.push(items[0]);
-                    production_4_rev_cost_all_option.series[0].data.push([0, parseFloat(items[1])]); // Revenue
-                    production_4_rev_cost_all_option.series[1].data.push([parseFloat(items[3]), parseFloat(items[1])]); // Cost
-                }
-            });
-        
-            // Create the chart with the correct options
-            let chart = new Highcharts.Chart(production_4_rev_cost_all_option);
+        $.each(lines, function(lineNo, line) {
+            var items = line.split(',');
+    
+            if (lineNo != 0) { // Skip the first line (headers)
+                production_4_rev_cost_all_option.xAxis.categories.push(items[0]);
+                production_4_rev_cost_all_option.series[0].data.push([0, parseFloat(items[1])]); // Revenue
+                production_4_rev_cost_all_option.series[1].data.push([parseFloat(items[3]), parseFloat(items[1])]); // Cost
+            }
         });
-    });
+    
+        // Create the chart with the correct options
+        let chart = new Highcharts.Chart(production_4_rev_cost_all_option);
+        });
+
     
 });
     

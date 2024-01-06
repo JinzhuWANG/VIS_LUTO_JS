@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
 
         data: {
-            csvURL: "../data/GHG_1_cunsum_emission_Mt.csv",
+            csv: document.getElementById('GHG_1_cunsum_emission_Mt_csv').innerHTML,
         },
 
         yAxis: {
@@ -136,44 +136,43 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     // push data into options
-    $.get("../data/GHG_2_individual_emission_Mt.csv", function (data) {
-        // Split the lines
-        var lines = data.split('\n');
+    let data = document.getElementById('GHG_2_individual_emission_Mt_csv').innerHTML;
+    // Split the lines
+    var lines = data.split('\n');
 
-        // Push column data into data list
-        for (let i = 0; i < lines.length; i++) {
+    // Push column data into data list
+    for (let i = 0; i < lines.length; i++) {
 
+        if (i == 0) {
+            // push column names into series names
+            options.series[0].name = lines[i].split(",")[1];
+            options.series[1].name = lines[i].split(",")[2];
+            options.series[2].name = lines[i].split(",")[3];
+            options.series[3].name = lines[i].split(",")[4];
+            options.series[4].name = lines[i].split(",")[5];
+        }
+        else {
+            // push row data into series data
+            let year = lines[i].split(",")[0];
+            let col1 = lines[i].split(",")[1];
+            let col2 = lines[i].split(",")[2];
+            let col3 = lines[i].split(",")[3];
+            let col4 = lines[i].split(",")[4];
+            let col5 = lines[i].split(",")[5];
 
-            if (i == 0) {
-                // push column names into series names
-                options.series[0].name = lines[i].split(",")[1];
-                options.series[1].name = lines[i].split(",")[2];
-                options.series[2].name = lines[i].split(",")[3];
-                options.series[3].name = lines[i].split(",")[4];
-                options.series[4].name = lines[i].split(",")[5];
-            }
-            else {
-                // push row data into series data
-                let year = lines[i].split(",")[0];
-                let col1 = lines[i].split(",")[1];
-                let col2 = lines[i].split(",")[2];
-                let col3 = lines[i].split(",")[3];
-                let col4 = lines[i].split(",")[4];
-                let col5 = lines[i].split(",")[5];
-
-                options.xAxis.categories.push(year);
-                options.series[0].data.push(parseFloat(col1));
-                options.series[1].data.push(parseFloat(col2));
-                options.series[2].data.push(parseFloat(col3));
-                options.series[3].data.push(parseFloat(col4));
-                options.series[4].data.push(parseFloat(col5));
-            }
-
+            options.xAxis.categories.push(year);
+            options.series[0].data.push(parseFloat(col1));
+            options.series[1].data.push(parseFloat(col2));
+            options.series[2].data.push(parseFloat(col3));
+            options.series[3].data.push(parseFloat(col4));
+            options.series[4].data.push(parseFloat(col5));
         }
 
-        // Create the chart
-        var chart = new Highcharts.Chart(options);
-    });
+    }
+
+    // Create the chart
+    var chart = new Highcharts.Chart(options);
+
 
     // Chart:GHG_3_crop_lvstk_emission_Mt
     Highcharts.chart('GHG_3_crop_lvstk_emission_Mt', {
@@ -191,7 +190,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
 
         data: {
-            csvURL: "../data/GHG_3_crop_lvstk_emission_Mt.csv",
+            csv: document.getElementById('GHG_3_crop_lvstk_emission_Mt_csv').innerHTML,
         },
 
         yAxis: {
@@ -245,7 +244,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
 
         data: {
-            csvURL: "../data/GHG_4_dry_irr_emission_Mt.csv",
+            csv: document.getElementById('GHG_4_dry_irr_emission_Mt_csv').innerHTML,
         },
 
         yAxis: {
@@ -299,7 +298,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
 
         data: {
-            csvURL: "../data/GHG_5_category_emission_Mt.csv",
+            csv: document.getElementById('GHG_5_category_emission_Mt_csv').innerHTML,
         },
 
         yAxis: {
@@ -353,7 +352,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
 
         data: {
-            csvURL: "../data/GHG_6_sources_emission_Mt.csv",
+            csv: document.getElementById('GHG_6_sources_emission_Mt_csv').innerHTML,
         },
 
         yAxis: {
@@ -478,74 +477,72 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     // Assuming the CSV has a header row and multiple data rows matching the series array length
-    $.get("../data/GHG_7_lu_lm_emission_Mt_wide.csv", function (data) {
-        var lines = data.split('\n');
+    let inner_txt = $("#GHG_7_lu_lm_emission_Mt_wide_csv").html();
+    var lines = inner_txt.split('\n');
 
-        // Set categories from the first line (header)
-        GHG_7_lu_lm_emission_Mt_wide_option.xAxis.categories = lines[0].split(",").slice(2);
+    // Set categories from the first line (header)
+    GHG_7_lu_lm_emission_Mt_wide_option.xAxis.categories = lines[0].split(",").slice(2);
 
-        // Process each line (excluding the header)
-        for (let i = 1; i < lines.length; i++) {
-            let lineData = lines[i].split(",");
-            if (GHG_7_lu_lm_emission_Mt_wide_option.series[i - 1]) {
-                GHG_7_lu_lm_emission_Mt_wide_option.series[i - 1].stack = lineData[0];
-                GHG_7_lu_lm_emission_Mt_wide_option.series[i - 1].name = lineData[1];
-                GHG_7_lu_lm_emission_Mt_wide_option.series[i - 1].data = lineData.slice(2).map(x => parseFloat(x));
-            }
+    // Process each line (excluding the header)
+    for (let i = 1; i < lines.length; i++) {
+        let lineData = lines[i].split(",");
+        if (GHG_7_lu_lm_emission_Mt_wide_option.series[i - 1]) {
+            GHG_7_lu_lm_emission_Mt_wide_option.series[i - 1].stack = lineData[0];
+            GHG_7_lu_lm_emission_Mt_wide_option.series[i - 1].name = lineData[1];
+            GHG_7_lu_lm_emission_Mt_wide_option.series[i - 1].data = lineData.slice(2).map(x => parseFloat(x));
         }
+    }
 
-        var chart = new Highcharts.Chart(GHG_7_lu_lm_emission_Mt_wide_option);
-    });
+    var chart = new Highcharts.Chart(GHG_7_lu_lm_emission_Mt_wide_option);
+
 
 
 
     // Chart:GHG_8_lu_source_emission_Mt
-    $.getJSON("../data/GHG_8_lu_source_emission_Mt.json",
-        function(data) { 
-                Highcharts.chart('GHG_8_lu_source_emission_Mt', {
-                    chart: {
-                        type: 'packedbubble'
-                    },
-                    title: {
-                        text: 'GHG Emission in the target year'
-                    },
-                    tooltip: {
-                        useHTML: true,
-                        pointFormat: '<b>{point.name}:</b> {point.value}m CO<sub>2</sub>'
-                    },
-                    plotOptions: {
-                        packedbubble: {
-                            useSimulation: true,
-                            splitSeries: false,
-                            minSize: '10%',
-                            maxSize: '1000%',
-                            dataLabels: {
-                                enabled: true,
-                                format: '{point.name}',
-                                filter: {
-                                    property: 'y',
-                                    operator: '>',
-                                    value: 1
-                                },
-                                
-                            }
-                        }
-                    },
-                
-                    series:data,
-
-                    credits: {
-                        enabled: false
+    Highcharts.chart('GHG_8_lu_source_emission_Mt', {
+        chart: {
+            type: 'packedbubble'
+        },
+        title: {
+            text: 'GHG Emission in the target year'
+        },
+        tooltip: {
+            useHTML: true,
+            pointFormat: '<b>{point.name}:</b> {point.value}m CO<sub>2</sub>'
+        },
+        plotOptions: {
+            packedbubble: {
+                useSimulation: true,
+                splitSeries: false,
+                minSize: '10%',
+                maxSize: '1000%',
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.name}',
+                    filter: {
+                        property: 'y',
+                        operator: '>',
+                        value: 1
                     },
 
-                    exporting: {
-                        sourceWidth: 1200,
-                        sourceHeight: 600,
-                    }
-                });
-            
-                    
-        }); 
+                }
+            }
+        },
+
+        series: JSON.parse($("#GHG_8_lu_source_emission_Mt_csv").html()),
+
+        credits: {
+            enabled: false
+        },
+
+        exporting: {
+            sourceWidth: 1200,
+            sourceHeight: 600,
+        }
+    });
+
+
+
 
 
     // Chart:GHG_9_non_ag_crop_lvstk_emission_Mt
@@ -564,7 +561,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
 
         data: {
-            csvURL: "../data/GHG_9_non_ag_crop_lvstk_emission_Mt.csv",
+            csv: document.getElementById('GHG_9_non_ag_crop_lvstk_emission_Mt_csv').innerHTML,
         },
 
         yAxis: {
@@ -613,7 +610,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
 
         data: {
-            csvURL: "../data/GHG_10_GHG_ag_man_df_wide_Mt.csv",
+            csv: document.getElementById('GHG_10_GHG_ag_man_df_wide_Mt_csv').innerHTML,
         },
 
         yAxis: {
@@ -667,7 +664,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
 
         data: {
-            csvURL: "../data/GHG_11_GHG_ag_man_GHG_crop_lvstk_df_wide_Mt.csv",
+            csv: document.getElementById('GHG_11_GHG_ag_man_GHG_crop_lvstk_df_wide_Mt_csv').innerHTML
         },
 
         yAxis: {
@@ -721,7 +718,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
 
         data: {
-            csvURL: "../data/GHG_12_GHG_ag_man_dry_irr_df_wide_Mt.csv",
+            csv: document.getElementById('GHG_12_GHG_ag_man_dry_irr_df_wide_Mt_csv').innerHTML,
         },
 
         yAxis: {
@@ -734,7 +731,7 @@ document.addEventListener('DOMContentLoaded', function () {
             align: 'right',
             verticalAlign: 'top',
             layout: 'vertical',
-            x: 10,
+            x: -100,
             y: 250
         },
 

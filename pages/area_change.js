@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
             text: 'Land-use Total Area Change'
         },
         data: {
-            csvURL: "../data/area_1_total_area_wide.csv",
+            csv: document.getElementById('area_1_total_area_wide_csv').innerHTML,
         },
         credits: {
             enabled: false
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
             text: 'Total Area by Irrigation Type'
         },
         data: {
-            csvURL: "../data/area_2_irrigation_area_wide.csv",
+            csv: document.getElementById('area_2_irrigation_area_wide_csv').innerHTML,
         },
         credits: {
             enabled: false
@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', function() {
             text: 'Total Area by Agricultural Management Type'
         },
         data: {
-            csvURL: "../data/area_3_am_total_area_wide.csv",
+            csv: document.getElementById('area_3_am_total_area_wide_csv').innerHTML,
         },
         credits: {
             enabled: false
@@ -185,8 +185,8 @@ document.addEventListener('DOMContentLoaded', function() {
             text: 'Total Area by Land-use Type'
         },
         data: {
-            csvURL: "../data/area_4_am_lu_area_wide.csv",
-        },
+            csv: document.getElementById('area_4_am_lu_area_wide_csv').innerHTML,
+                },
         credits: {
             enabled: false
         },

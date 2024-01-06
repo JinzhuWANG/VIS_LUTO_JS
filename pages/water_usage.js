@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
 
         data: {
-            csvURL: "../data/water_1_percent_to_limit.csv",
+            csv: document.getElementById('water_1_percent_to_limit_csv').innerHTML,
         },
         
         yAxis: {
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
 
         data: {
-            csvURL: "../data/water_2_volum_to_limit.csv",
+            csv: document.getElementById('water_2_volum_to_limit_csv').innerHTML,
         },
         
         yAxis: {
