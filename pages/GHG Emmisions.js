@@ -517,8 +517,8 @@ document.addEventListener('DOMContentLoaded', function () {
                         packedbubble: {
                             useSimulation: true,
                             splitSeries: false,
-                            minSize: '50%',
-                            maxSize: '300%',
+                            minSize: '10%',
+                            maxSize: '1000%',
                             dataLabels: {
                                 enabled: true,
                                 format: '{point.name}',
@@ -574,11 +574,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
 
         legend: {
-            align: 'right',
-            verticalAlign: 'top',
-            layout: 'vertical',
-            x: -100,
-            y: 250
+            disabled: true,
         },
 
         tooltip: {
